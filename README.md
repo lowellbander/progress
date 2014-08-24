@@ -1,2 +1,4 @@
 progress
 ========
+
+![screenshot](screenshot.png)
