@@ -3,10 +3,10 @@
   <p class="lead">
       Good work! Keep going!
   </p>
-  You're on page <input type="text" ng-model="current">
+  You're on page <b>{{current}}</b>.
   <br>
   There are {{total}} pages in this chapter.<br>
-  You've read {{completed}} of them. <br>
+  You've read {{completed}} of them and have {{remaining}} to go. <br>
   <!--(You're on page {{current}}, the first is {{first}} and the last is {{last}}.)-->
   <button class="glyphicon glyphicon-arrow-up" ng-click="current = current + 1">
   <button class="glyphicon glyphicon-arrow-down" ng-click="current = current - 1">

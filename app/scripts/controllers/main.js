@@ -20,6 +20,7 @@ angular.module('progressApp')
     $scope.$watch('current', function(){
         $scope.total = $scope.last - $scope.first;
         $scope.completed = $scope.current - $scope.first;
+        $scope.remaining = $scope.total - $scope.completed;
         $scope.percent = Math.round(100 * ($scope.completed / $scope.total));
         if ($scope.percent < 0)
             $scope.percent = '...'
