@@ -22,6 +22,7 @@ angular.module('progressApp')
         $scope.completed = $scope.current - $scope.first;
         $scope.remaining = $scope.total - $scope.completed;
         $scope.percent = Math.round(100 * ($scope.completed / $scope.total));
+        $scope.message = $scope.percent == 100 ? "Congratulations! You're done!" : "Good work! Keep going!"
         if ($scope.percent < 0)
             $scope.percent = '...'
     });
