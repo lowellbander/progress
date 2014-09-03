@@ -8,5 +8,20 @@
   There are {{total}} pages in this chapter.<br>
   You've read {{completed}} of them and have {{remaining}} to go. <br>
   <!--(You're on page {{current}}, the first is {{first}} and the last is {{last}}.)-->
-  <button class="glyphicon glyphicon-arrow-up" ng-click="current = current + 1">
-  <button class="glyphicon glyphicon-arrow-down" ng-click="current = current - 1">
+  <!-- <button class="glyphicon glyphicon-arrow-up" ng-click="current = current + 1">
+  <button class="glyphicon glyphicon-arrow-down" ng-click="current = current - 1"> -->
+<br>
+    <button type="button" class="btn btn-default btn-lg" ng-click="current = current + 1">
+      <span class="glyphicon glyphicon-chevron-up"></span>
+    </button>
+    <button type="button" class="btn btn-default btn-lg" ng-click="current = current - 1">
+      <span class="glyphicon glyphicon-chevron-down"></span>
+    </button>
+</div>
+<button type="button" class="btn btn-default btn-lg pull-right" ng-click="dispSettings = !dispSettings">
+  <span class="glyphicon glyphicon-pencil"></span>
+</button>
+<div ng-show="dispSettings">
+<b>First Page: </b><input type="text" class="input-medium search-query" ng-model="first">
+<b>Last Page: </b><input type="text" class="input-medium search-query" ng-model="last">
+</div>
