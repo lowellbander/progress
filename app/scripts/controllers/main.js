@@ -17,8 +17,8 @@ angular.module('progressApp')
 
     $scope.dispSettings = false;
 
-    $scope.first = 1157;
-    $scope.last = 1195;
+    $scope.first = 1207;
+    $scope.last = 1226;
     $scope.current = $scope.first;
     $scope.$watch('current', function(){
         $scope.total = $scope.last - $scope.first;
@@ -33,11 +33,6 @@ angular.module('progressApp')
         $scope.current = $scope.first;
     });
     $scope.$watch('last', function(){
-        $scope.completed = $scope.current - $scope.first;
-        $scope.remaining = $scope.total - $scope.completed;
-        $scope.percent = Math.round(100 * ($scope.completed / $scope.total));
-        $scope.message = $scope.percent == 100 ? "Congratulations! You're done!" : "Good work! Keep going!"
-        if ($scope.percent < 0)
-            $scope.percent = '...'
+        $scope.current = $scope.first;
     });
   });
