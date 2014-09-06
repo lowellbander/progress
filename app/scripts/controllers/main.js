@@ -17,8 +17,17 @@ angular.module('progressApp')
 
     $scope.dispSettings = false;
 
-    $scope.first = 1207;
-    $scope.last = 1226;
+    $scope.increment = function () {
+        if ($scope.current != $scope.last)
+            ++$scope.current;
+    };
+    $scope.decrement = function () {
+        if ($scope.current != $scope.first)
+            --$scope.current;
+    };
+
+    $scope.first = 1234;
+    $scope.last = 1258;
     $scope.current = $scope.first;
     $scope.$watch('current', function(){
         $scope.total = $scope.last - $scope.first;
